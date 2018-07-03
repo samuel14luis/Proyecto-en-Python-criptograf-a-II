@@ -1,42 +1,39 @@
 import os
+from utilidades.consola import limpiarPantalla, mostrarError, mostrarMenu
+from CriptografiaModerna.menuCM import menuCM
+from CriptografiaClasica.menuCC import menuCC
 
 #DEFINICIÓN DE VARIABLES
-eleccion = 'seguir'
-menu = [
-    '[1] Criptografía Clásica',
-    '[2] Criptografía Moderna',
-    '[0] Salir'
-]
+
 
 #DEFINICIÓN DE FUNCIONES
-def limpiarPantalla():
-    os.system('cls')
-
 def iniciarMenu():
+    eleccion = 'seguir'
+    menu = [
+        '[1] Criptografía Clásica',
+        '[2] Criptografía Moderna',
+        '[0] Salir'
+    ]
+
+    print ('Bienvenido')
+
     while eleccion == 'seguir':
-        print ('Bienvenido')
-        for i in range(len(menu)):
-            print(menu[i])
+        
+        mostrarMenu(menu)
 
-        eleccion = input('Elija una opción> ')
+        op = input('Elija una opción> ')
+
         limpiarPantalla()
-        eleccion = evaluarEleccion(eleccion)
 
-def evaluarEleccion(eleccion):
-    if eleccion == '1':
-        return criptografiaClasica()
-    elif eleccion == '2':
-        return criptografiaModerna()
-    else:
-        return eleccion
-
-def criptografiaClasica():
-    print('iniciando criptografía Clásica')
-    return 'seguir'
-
-def criptografiaModerna():
-    print('iniciando criptografía Moderna')
-    return 'seguir'
+        if op == '1':
+            eleccion = menuCC()
+        elif op == '2':
+            eleccion = menuCM()
+        elif op == '0':
+            eleccion = 'salir'
+        else:
+            mostrarError('Debe ingresar una opción válida.')
+            eleccion = 'seguir'
 
 
 limpiarPantalla()
