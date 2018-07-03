@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from io import open
+from generarHTML import html_create
+html_create("index","_cifrado","_contenido","_nombre")
 
 #archivo_texto = open('prueba.html', 'w') 
 # w -> write | Modo Escritura   write(contenido)
@@ -19,11 +21,11 @@ from io import open
 #FIN LEYENDO ARCHIVOS
 
 #MODIFICANDO ARCHIVO
-archivo_texto = open('prueba.html', 'a') 
-archivo_texto.write('\nlínea añadida')
+#archivo_texto = open('prueba.html', 'a') 
+#archivo_texto.write('\nlínea añadida')
 #FIN MODIFICANDO ARCHIVO
 
-archivo_texto.close()
+#archivo_texto.close()
 
 #print(contenido.decode('ascii','ignore')) #para ignorar los carácteres especiales como tildes y ñ
 
