@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from io import open
 from generarHTML import html_create
-html_create("index","_cifrado","_contenido","_nombre")
+html_create("index","_cifrado","_contenido","_nombre", True)
 
 #archivo_texto = open('prueba.html', 'w') 
 # w -> write | Modo Escritura   write(contenido)

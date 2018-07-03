@@ -1,5 +1,5 @@
 import webbrowser
-def html_create(_dir,_cifrado,_contenido,_nombre):
+def html_create(_dir,_cifrado,_contenido,_nombre,_abrir):
     f = open(_dir+'.html','wb')
 
     mensaje = """<!DOCTYPE html>
@@ -83,4 +83,5 @@ def html_create(_dir,_cifrado,_contenido,_nombre):
 
     f.write(mensaje.encode('utf-8'))
     f.close()
-    webbrowser.open_new_tab(_dir+'.html')
+    if _abrir:
+        webbrowser.open_new_tab(_dir+'.html')
