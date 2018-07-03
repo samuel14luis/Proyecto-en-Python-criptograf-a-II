@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-from io import open
 from generarHTML import html_create
 html_create("index","_cifrado","_contenido","_nombre", True)
 

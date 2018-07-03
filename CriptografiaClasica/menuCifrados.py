@@ -1,13 +1,12 @@
 from utilidades.consola import *
-from CriptografiaClasica.menuCifrados import *
 #Menu CC = Criptografía Clásica
-def menuCC():
+def menuCifrados():
     cont = 0
     eleccion = 'seguir'
     menu = [
-        '[1] César',
-        '[2] Atbash',
-        '[3] Escritura Inversa',
+        '[1] Cifrar',
+        '[2] Descifrar',
+        '[3] Breve descripción',
         '[0] volver'
     ]
     
@@ -20,13 +19,13 @@ def menuCC():
         limpiarPantalla()
 
         if op == '1':
-            menuCifrados()
+            print(op)
             cont = 0
         elif op == '2':
-            menuCifrados()
+            print(op)
             cont = 0
         elif op == '3':
-            menuCifrados()
+            print(op)
             cont = 0
         elif op == '0':
             return 'seguir'

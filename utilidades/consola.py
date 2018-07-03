@@ -20,8 +20,8 @@ def salir():
     cont = 0
     menu = [
         'Seguro que desea salir del programa?',
-        '[0] Si, deseo salir ya del programa.',
         '[1] No, quiero quedarme un rato más.',
+        '[0] Si, deseo salir ya del programa.'
     ]
 
     eleccion = 'x'
@@ -43,4 +43,17 @@ def salir():
     else:
         return 'salir'
 
-    
+def despedida():
+    limpiarPantalla()
+    print('::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::')
+    print('')
+    print('>_ Desarrollado por Equipo N°2 ●•')
+    print('')
+    print('::::::::::  ::::::::   :::    ::: ::::::::::: :::::::::   ::::::::          ::::::::  ')
+    print(':+:        :+:    :+:  :+:    :+:     :+:     :+:    :+: :+:    :+:        :+:    :+: ')
+    print('+:+        +:+    +:+  +:+    +:+     +:+     +:+    +:+ +:+    +:+              +:+  ')
+    print('+#++:++#   +#+    +:+  +#+    +:+     +#+     +#++:++#+  +#+    +:+            +#+    ')
+    print('+#+        +#+  # +#+  +#+    +#+     +#+     +#+        +#+    +#+          +#+      ')
+    print('#+#        #+#   +#+   #+#    #+#     #+#     #+#        #+#    #+#         #+#       ')
+    print('##########  ###### ###  ########  ########### ###         ########         ########## ')
+    print('')

@@ -42,3 +42,6 @@ def iniciarMenu():
 
 limpiarPantalla()
 iniciarMenu()
+despedida()
+input('')
+limpiarPantalla()
