@@ -14,3 +14,33 @@ def mostrarError(mensaje):
 def mostrarMenu(opciones):
     for i in range(len(opciones)):
             print(opciones[i])
+
+#Muestra un menu para salir o seguir en el menu
+def salir():
+    cont = 0
+    menu = [
+        'Seguro que desea salir del programa?',
+        '[0] Si, deseo salir ya del programa.',
+        '[1] No, quiero quedarme un rato más.',
+    ]
+
+    eleccion = 'x'
+
+    while eleccion != '0' and eleccion != '1':
+        
+        mostrarMenu(menu)
+
+        eleccion = input('> ')
+
+        limpiarPantalla()
+
+        if eleccion != '0' and eleccion != '1':
+            cont += 1
+            mostrarError('Debe ingresar una opción válida. {' + str(cont) + '}')
+
+    if eleccion == '1':
+        return 'seguir'
+    else:
+        return 'salir'
+
+    

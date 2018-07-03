@@ -1,28 +1,38 @@
-from utilidades.consola import limpiarPantalla
+from utilidades.consola import *
 
 #Menu CC = Criptografía Clásica
 def menuCC():
+    cont = 0
     eleccion = 'seguir'
     menu = [
         '[1] César',
         '[2] Atbash',
         '[3] Escritura Inversa',
-        '[0] Salir'
+        '[0] volver'
     ]
+    
     while eleccion == 'seguir':
-        print ('Elija uno de los métodos de cifrado clásico')
-        for i in range(len(menu)):
-            print(menu[i])
+        
+        mostrarMenu(menu)
 
-        eleccion = input('Elija una opción> ')
+        op = input('Elija una opción> ')
+
         limpiarPantalla()
-        if eleccion == '1':
-            return menuCC()
-        elif eleccion == '2':
-            return menuCM()
-        elif eleccion == '0':
-            return 'salir'
+
+        if op == '1':
+            print(op)
+            cont = 0
+        elif op == '2':
+            print(op)
+            cont = 0
+        elif op == '3':
+            print(op)
+            cont = 0
+        elif op == '0':
+            return 'seguir'
         else:
-            return eleccion
+            cont += 1
+            mostrarError('Debe ingresar una opción válida. {' + str(cont) + '}')
+            eleccion = 'seguir'
 
     return 'seguir'

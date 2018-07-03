@@ -1,5 +1,5 @@
 import os
-from utilidades.consola import limpiarPantalla, mostrarError, mostrarMenu
+from utilidades.consola import *
 from CriptografiaModerna.menuCM import menuCM
 from CriptografiaClasica.menuCC import menuCC
 
@@ -8,6 +8,7 @@ from CriptografiaClasica.menuCC import menuCC
 
 #DEFINICIÓN DE FUNCIONES
 def iniciarMenu():
+    cont = 0
     eleccion = 'seguir'
     menu = [
         '[1] Criptografía Clásica',
@@ -27,12 +28,15 @@ def iniciarMenu():
 
         if op == '1':
             eleccion = menuCC()
+            cont = 0
         elif op == '2':
             eleccion = menuCM()
+            cont = 0
         elif op == '0':
-            eleccion = 'salir'
+            eleccion = salir()
         else:
-            mostrarError('Debe ingresar una opción válida.')
+            cont += 1
+            mostrarError('Debe ingresar una opción válida. {' + str(cont) + '}')
             eleccion = 'seguir'
 
 
