@@ -1,15 +1,11 @@
-import webbrowser
-def html_create(_dir,_cifrado,_contenido,_abrir):
-    f = open(_dir+'.html','wb')
-
-    mensaje = """<!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>"""+_cifrado+""" - Equipo 2</title>
+        <title>Cifrado Vigénere - Resultados para @samuel14luis</title>
         <style>
             body {
                 background: white;
@@ -68,20 +64,15 @@ def html_create(_dir,_cifrado,_contenido,_abrir):
 
     <body>
         <div class="contenido">
-            <h1 class="titulo">"""+_cifrado+"""</h1>
+            <h1 class="titulo">Cifrado Vigénere</h1>
             <div class="texto">
                 <p class="resultado">
-                    """+_contenido+"""
+                    pzmjilioljeitpvnevansilru
                 </p>
             </div>
-            <h4 class="pie">Hecho por @Equipo2</h4>
+            <h4 class="pie">Resultados para @samuel14luis</h4>
 
         </div>
     </body>
 
-    </html>"""
-
-    f.write(mensaje.encode('utf-8'))
-    f.close()
-    if _abrir:
-        webbrowser.open_new_tab(_dir+'.html')
+    </html>

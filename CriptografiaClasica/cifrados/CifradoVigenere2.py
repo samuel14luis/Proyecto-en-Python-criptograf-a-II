@@ -1,4 +1,35 @@
 import os
+from utilidades.consola import *
+from utilidades.generarHMTL import *
+
+class CifradoVigenere():
+    def menu(self,eleccion_salida):
+        #Cifrar = 2  |  Descifrar = 3
+        #Consola = 5 |  HTML = 7  | TXT = 11       
+		if eleccion_salida%5 == 0:
+			if eleccion_salida%2 == 0:
+				print('mostrando menú de Cifrado César. Salida: '+str(eleccion_salida))
+			else:
+				print('descifrando salida Consola')
+		elif eleccion_salida%7 == 0:
+			if eleccion_salida%2 == 0:
+				html_create('prueba0','texto_cifrado','_caocsano','_nombre',True)
+			else:
+				html_create('prueba0','texto_descifrado','_contenido','_nombre',True)
+		elif eleccion_salida%11 == 0:
+			if eleccion_salida%2 == 0:
+				print('mostrando menú de Cifrado César. Salida: '+str(eleccion_salida))
+			else:
+				print('descifrando salida Consola')
+
+    
+    def descripcion(self):
+        mostrarMensaje('Descripción del Cifrado Vigenere')
+        limpiarPantallaTecla('Presione una tecla para regresar> ')
+
+
+
+
 tabla = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 seguir = 'cifrar'
 

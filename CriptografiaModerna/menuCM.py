@@ -1,4 +1,4 @@
 #Menu CM = Criptografía Moderna
-def menuCM():
+def menuCM(output_config):
     print('iniciando criptografía Moderna')
-    return 'seguir'
+    return ['seguir',5]
