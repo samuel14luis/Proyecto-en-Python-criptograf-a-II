@@ -6,11 +6,9 @@ def menuCifrados(cifrado,oconfig):
     output_config = oconfig #Configuración de salida consola:5, html:7, txt:11
     menu = [
         '[1] Configurar Salida',
-        '-'*22,
         '[2] Cifrar',
         '[3] Descifrar',
         '[4] Breve descripción',
-        '-'*22,
         '[0] volver'
     ]
     

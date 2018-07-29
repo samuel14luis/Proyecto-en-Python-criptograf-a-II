@@ -136,14 +136,3 @@ def despedida():
     print('#+#        #+#   +#+   #+#    #+#     #+#     #+#        #+#    #+#         #+#       ')
     print('##########  ###### ###  ########  ########### ###         ########         ########## ')
     print('')
-
-def getCodigo(letra):
-        cod = ord(letra)
-        if cod >= 97 and cod <= 110:
-            return cod - 97
-        elif cod >= 111 and cod <= 122:
-            return cod - 96
-        elif cod == 241:
-            return 14
-        else:
-            return -1

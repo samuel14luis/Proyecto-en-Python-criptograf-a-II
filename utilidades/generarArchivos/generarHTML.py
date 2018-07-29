@@ -1,5 +1,5 @@
 import webbrowser
-def html_create(_dir,_cifrado,_contenido,_abrir):
+def html_create(_dir,_cifrado,_contenido,_nombre,_abrir):
     f = open(_dir+'.html','wb')
 
     mensaje = """<!DOCTYPE html>
@@ -9,7 +9,7 @@ def html_create(_dir,_cifrado,_contenido,_abrir):
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>"""+_cifrado+""" - Equipo 2</title>
+        <title>"""+_cifrado+""" - Resultados para @"""+_nombre+"""</title>
         <style>
             body {
                 background: white;
@@ -74,7 +74,7 @@ def html_create(_dir,_cifrado,_contenido,_abrir):
                     """+_contenido+"""
                 </p>
             </div>
-            <h4 class="pie">Hecho por @Equipo2</h4>
+            <h4 class="pie">Resultados para @"""+_nombre+"""</h4>
 
         </div>
     </body>
